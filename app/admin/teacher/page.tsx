@@ -15,11 +15,9 @@ export default async function TeacherPage(){
                 </tr>
             </thead>
             <tbody>
-                {teachers.map( => (  
+                     {teachers.map(teacher => ( <tr key={teacher.id}> <td>{teacher.name}</td> <td>{teacher.email}</td> <td><a href="/admin/teacher/edit">Editar</a></td> </tr>
 
-                <tr key={teachers.id}> <td>{teachers.name}</td> <td>{teachers.email}</td> <td><a href={`/admin/teacher/edit?id=${teachers.id}`}>Editar</a></td> </tr>
-
-                ))}
+))}
             </tbody>
          </table>
         </>
